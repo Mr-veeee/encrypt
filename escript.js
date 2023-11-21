@@ -20,3 +20,8 @@ function shareWhatsApp() {
 
     window.open(whatsappLink, '_blank');
 }
+function copyEncrypted() {
+  const encryptedMessage = document.getElementById('encrypted').value;
+  navigator.clipboard.writeText(encryptedMessage);
+  alert('Encrypted message copied to clipboard!');
+}
