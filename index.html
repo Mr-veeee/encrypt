@@ -10,10 +10,6 @@
 <body>
   <header>
     <img src="loo.jpeg" alt="Mr.Vee Logo">
-            <label class="mode">
-                <input type="checkbox" id="darkModeToggle">
-                <i class='bx bxs-moon'></i>
-            </label>
   </header>
     <h1>Encrypted Messages by Mr.Vee</h1>
 
@@ -49,30 +45,4 @@
   </div>
   
 </footer>
-        <script>
-        window.onload = function() {
-            var skillLevels = document.getElementsByClassName('skill-level');
-            for (var i = 0; i < skillLevels.length; i++) {
-                var skillLevel = skillLevels[i];
-                skillLevel.style.width = skillLevel.textContent.length * 20 + '%';
-            }
-
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const body = document.body;
-            const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-            if (isDarkMode) {
-                body.classList.add('dark-mode');
-                darkModeToggle.checked = true;
-            }
-            darkModeToggle.addEventListener('change', () => {
-                if (darkModeToggle.checked) {
-                    body.classList.add('dark-mode');
-                    localStorage.setItem('darkMode', 'enabled');
-                } else {
-                    body.classList.remove('dark-mode');
-                    localStorage.setItem('darkMode', 'disabled');
-                }
-            });
-        };
-    </script>
 </html>
